@@ -1,0 +1,80 @@
+1. Tổng quan đồ án
+	Hiện tại giá nhà (BDS) ở Việt Nam đang rất biến động do đó chúng ta khó có thể xác định được giá trị ngôi nhà chúng ta cần mua/bán có hợp lý hay không
+	Có rất nhiều yếu tố ảnh hưởng tới giá của 1 ngôi nhà
+	Project này sử dụng tập dữ liệu giá nhà https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
+
+2. Xác định phạm vi đồ án
+	- Mặc dù dataset cho đồ án là ở Boston US nhưng qua đồ án này chúng ta có thể áp dụng tương tự cho các thành phố ở Việt Nam nếu chúng ta có dữ liệu.
+	- Qua đồ án này có thể hiểu được một số phương pháp xử lý dữ liệu dạng bảng
+	- Cách chọn model phù hợp
+
+3. Các chỉ số đánh giá
+	- Root mean square error of log of Label
+	- Root mean square error of Label
+
+4. Tiền xử lý dữ liệu
+	- Missing values
+		+ Imputing if missing rate > 0.4 (Mean, mode, KNN, arbitary)
+		+ Removing if missing rate < 0.4 (MiscFeature)
+	- Encoding
+		+ Ordered encoding (for quality features)
+		+ Mean encoding (MSSubClass)
+		+ One-hot encoding (the others)
+	- Outliers
+		+ Remove
+		+ Set outlier to it's limit
+	- Rare labels
+		+ Create a new category for rare labels
+	
+	- Feature creation
+		+ TotalSF, Total_sqr_footage, Total_Bathrooms
+
+	- Feature scaling
+		+ StandardScaler
+		+ MinMaxScaler
+		+ RobustScaler
+	
+	- Feature selection
+		+ Statistical methods (Duplicated, Constant, Quasi-Constant, Low Correlation)
+		+ Lasso
+		+ Recursive Feature Elemination
+
+
+5. Modeling
+	- Model selection
+		+ Ridge regression
+		+ Decision Tree Regressor
+		+ ElasticNet
+		+ Gradient Boosting regressor
+		+ XGB Regressor
+	- Hyperparameter tuning
+		+ Ridge
+		+ Gradient Boosting regressor
+		+ XGB Regressor
+	- Training XGB Regressor 
+
+
+6. Đánh giá và kiểm định chất lượng mô hình
+
+
+
+Choose 3 best model for tuning hyperparameters
+
+
+
+Gradient Boosting Regressor is having the best performance, we use it for training.
+
+
+
+R2 is the score for model selection (higher is better)
+
+
+
+Then the result is
+
+
+
+Train set has 1460 records with total 80 columns:
+
+79 feature columns
+1 target column (SalePrice)
