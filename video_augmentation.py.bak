@@ -138,6 +138,8 @@ if __name__ == '__main__':
         video_paths = [line.rstrip() for line in file]
 
     
+    #exist_video_paths = glob.glob('E:/AICamp/Human-Action-Reconigtion-Comparison/rgb/rgb/*.avi')
+
     for video_path in video_paths:
         vaug = VAugmentation(destination_dir)
         #print(name)
