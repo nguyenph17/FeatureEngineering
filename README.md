@@ -1,2 +1,2 @@
 # AICamp_FeatureEngineering
-The first project at AICamp with House Prices dataset
+A machine learning project at AICamp with House Prices dataset
